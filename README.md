@@ -1,54 +1,74 @@
-# React + TypeScript + Vite
+# 🎥 AI-Powered YouTube Video Summarizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://github.com/user-attachments/assets/50e59e7b-0e1a-49ea-8698-1b7d03c564a3
 
-Currently, two official plugins are available:
+A **Chrome extension** built with **Vite + React** that provides **AI-powered** video summarization for YouTube. Extract transcripts, generate concise summaries, and get key takeaways in seconds!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 1️⃣ AI-Powered Summarization
+✅ Automatic video transcript extraction using YouTube’s API  
+✅ AI-driven text summarization (GPT, Gemini, BART)  
+✅ Multiple summarization formats:
+   - Bullet points
+   - Concise paragraphs
+   - Topic-wise segmentation
+   - Timestamps with key moments  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2️⃣ Customization Options
+✅ Adjustable summary length (short, medium, long)  
+✅ Focus area selection (e.g., key takeaways, definitions, Q&A)  
+✅ Keyword highlighting for frequently used terms  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 3️⃣ User-Friendly Chrome Extension Interface
+✅ One-click summarization on YouTube videos  
+✅ Floating summary widget for quick access  
+✅ Dark mode and theme customization  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 4️⃣ Multi-Language Support
+✅ Summarization in multiple languages (based on transcript availability)  
+✅ Auto-translate summaries into a preferred language  
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 5️⃣ Export & Sharing Options
+✅ Download summary as a text file  
+✅ Copy to clipboard for quick sharing  
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🛠 Installation
+
+### 👉 From Chrome Web Store (Coming Soon)
+1. Go to the **Chrome Web Store** (link to be added soon)
+2. Click **Add to Chrome**
+3. Pin the extension for easy access
+
+### 👉 Manual Installation (Development Mode)
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/MonuYadav05/Ai-YouTube-video-summarizer.git
+   cd Ai-YouTube-video-summarizer
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run in development mode:
+   ```sh
+   npm run dev
+   ```
+
+3. Compile extension:
+   ```sh
+   npm run build 
+   ```
+4. Load the extension in Chrome:
+   - Open `chrome://extensions/`
+   - Enable **Developer Mode** (top right corner)
+   - Click **Load Unpacked**
+   - Select the `dist` folder inside the project directory
+
+## ⚙️ Tech Stack
+- **Frontend:** React + Vite + Tailwind CSS
+- **Backend:** Fast Api server for youtube transcript
+- **AI Models:** Gemini-1.5-flash  (Api)
+- **YouTube API:** Transcript extraction
+
+
